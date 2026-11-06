@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E & W Verkkosivu</title>
+    <style>
+        /* Perusasetukset ja nollaus */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            overflow: hidden; /* Estää turhat vierityspalkit */
+        }
+
+        /* Taustakuva ja keskitys */
+        .page-container {
+            height: 100%;
+            width: 100%;
+            /* Vaihda alla oleva URL-osoite, jos haluat käyttää omaa taustakuvaasi */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* Täydellinen keskitys pysty- ja vaakasuunnassa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Sisältölaatikko */
+        .content-box {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Logo-elementti */
+        .logo {
+            width: 90px;
+            height: 90px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin: 0 auto 20px auto; /* Keskittää logon ja jättää välin otsikkoon */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border: 3px solid #00d2ff;
+        }
+
+        /* Otsikko */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+        /* Painikkeiden säiliö */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Väli painikkeiden välillä */
+        }
+
+        /* Linkkipainikkeiden tyylit */
+        .nav-button {
+            display: block;
+            padding: 14px 28px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px); /* Tekee lasimaisen efektin taustalle */
+        }
+
+        /* Efektit kun hiiri viedään painikkeen päälle */
+        .nav-button:hover {
+            background: #ffffff;
+            color: #1a1a1a;
+            border-color: #ffffff;
+            transform: translateY(-3px); /* Nostaa painiketta hieman */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Efekti kun painiketta klikataan */
+        .nav-button:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="content-box">
+            
+            <!-- Logo -->
+            <div class="logo">EW</div>
+            
+            <!-- Otsikko -->
+            <h1>Tervetuloa Sivustolle</h1>
+            
+            <!-- 4 Linkkinappia -->
+            <div class="button-group">
+                <a href="#palvelut" class="nav-button">Palvelut</a>
+                <a href="#tuotteet" class="nav-button">Tuotteet</a>
+                <a href="#meistä" class="nav-button">Tietoa meistä</a>
+                <a href="#ota-yhteyttä" class="nav-button">Ota yhteyttä</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

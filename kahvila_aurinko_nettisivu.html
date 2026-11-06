@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahvila Aurinko - Lämpimiä hetkiä ja tuoreita makuja</title>
+    <style>
+        /* Kahvilan lämmin ja kotoisa tyyli */
+        body {
+            font-family: 'Comfortaa', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4a3728;
+            background-color: #fffaf0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(74, 55, 40, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+        /* Vasen puoli: Paluulinkki ja Logo yhdessä */
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        /* Kahvilan tyyliin sopiva kotoisa paluunappi */
+        .back-home-btn {
+            text-decoration: none;
+            color: #4a3728;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s, background-color 0.3s;
+            background-color: #f7ebde;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .back-home-btn:hover {
+            color: #ffffff;
+            background-color: #ffb703; /* Muuttuu auringonkeltaiseksi */
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #4a3728;
+        }
+        .logo span {
+            color: #ffb703;
+        }
+        nav a {
+            text-decoration: none;
+            color: #6d5947;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffb703;
+        }
+        .hero {
+            background: linear-gradient(rgba(74, 55, 40, 0.5), rgba(74, 55, 40, 0.5)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ffb703;
+            color: #4a3728;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: #fb8500;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            color: #4a3728;
+            font-size: 2rem;
+            margin-bottom: 45px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .menu-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(74, 55, 40, 0.04);
+            border: 1px solid #f3ebd9;
+            text-align: center;
+        }
+        .menu-card h3 {
+            color: #4a3728;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .contact-box {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(74, 55, 40, 0.04);
+            border: 1px solid #f3ebd9;
+            text-align: center;
+        }
+        footer {
+            background-color: #4a3728;
+            color: #fffaf0;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigaatio paluunapilla ja ankkureilla -->
+    <header>
+        <div class="nav-container">
+            <div class="header-left">
+                <!-- Paluunappi pääsivulle -->
+                <a href="index.html" class="back-home-btn">← Pääsivulle</a>
+                <div class="logo">Kahvila <span>Aurinko</span></div>
+            </div>
+            <nav>
+                <a href="#etusivu">Etusivu</a>
+                <a href="#menu">Menu</a>
+                <a href="#yhteystiedot">Yhteystiedot</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero-osio (Etusivu) -->
+    <section id="etusivu" class="hero">
+        <h1>Päiväsi aurinkoisin hetki</h1>
+        <p>Tule nauttimaan vastapaahdetusta kahvista, itseleivotuista korvapuusteista ja raikkaista lounassalaateista viihtyisään miljööseemme.</p>
+        <a href="#yhteystiedot" class="btn">Katso aukioloajat</a>
+    </section>
+
+    <!-- Menu-osio -->
+    <section id="menu" class="section">
+        <h2 class="section-title">Suosikit menulta</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Erikoiskahvit</h3>
+                <p>Käsityönä valmistetut cappuccinot, lattet ja flat whitest laadukkaista luomupavuista.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Leivonnaiset</h3>
+                <p>Joka aamu omassa keittiössä leivotut suolaiset piiraat sekä suussa sulavat makeat herkut.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Raikkaat Smoothiet</h3>
+                <p>Vitamiinipommit täynnä kotimaisia marjoja, hedelmiä ja superfoodeja ilman lisättyä sokeria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yhteystiedot-osio -->
+    <section id="yhteystiedot" class="section">
+        <h2 class="section-title">Yhteystiedot & Aukioloajat</h2>
+        <div class="contact-box">
+            <p><strong>Kahvila Aurinko</strong></p>
+            <p>Aurinkokatu 5, 00100 Helsinki</p>
+            <p>Puh. 050 987 6543</p>
+            <hr style="border: 0; border-top: 1px dashed #f3ebd9; margin: 20px 0;">
+            <p><strong>Ma–Pe:</strong> 07:00 – 18:00</p>
+            <p><strong>La:</strong> 09:00 – 16:00</p>
+            <p><strong>Su:</strong> Suljettu</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kahvila Aurinko. Tervetuloa herkuttelemaan!</p>
+    </footer>
+
+</body>
+</html>

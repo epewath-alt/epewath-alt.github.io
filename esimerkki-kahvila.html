@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahvila Aurinko - Kahvia & Herkkuja sydämellä</title>
+    <style>
+        /* Sujuva rullaus ankkurilinkkeihin */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        /* Navigaatiopalkki */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #d4af37; /* Kultainen brändiväri */
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #a0a0a0;
+            margin-left: 25px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Pääosiot */
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        /* Hero-osio (Etusivu) */
+        .hero {
+            text-align: center;
+            padding: 140px 20px;
+            background: radial-gradient(circle at center, #1f1a10 0%, #121212 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Tyylikäs toimintapainike */
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d4af37;
+            color: #121212;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Otsikot ja tekstisisällöt */
+        h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            border-left: 3px solid #d4af37;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        h3 {
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin-top: 30px;
+        }
+
+        /* Aukioloajat ja listat */
+        .time-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .time-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+        }
+
+        .time-list strong {
+            color: #ffffff;
+        }
+
+        /* Alatunniste */
+        footer {
+            background-color: #0a0a0a;
+            color: #666;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#etusivu" class="logo">☕ KAHVILA AURINKO</a>
+            <nav>
+                <a href="#etusivu">Etusivu</a>
+                <a href="#ruokalista">Ruokalista</a>
+                <a href="#tarinamme">Tarinamme</a>
+                <a href="#yhteystiedot">Yhteystiedot</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ETUSIVU -->
+        <section id="etusivu" class="hero">
+            <h1>Pysähdy nauttimaan</h1>
+            <p>Tuoreita korvapuusteja, laadukkaita erikoiskahveja ja viikoittain vaihtuva täyttävä lounas kotoisassa ilmapiirissä.</p>
+            <a href="#ruokalista" class="btn">Tutustu Menuun</a>
+        </section>
+
+        <!-- RUOKALISTA -->
+        <section id="ruokalista">
+            <h2>Ruokalista</h2>
+            <p>Kaikki tuotteemme valmistetaan intohimolla parhaista raaka-aineista. Menu päivittyy viikoittain sesongin mukaan.</p>
+            <p><em>(Tähän osioon voit listata tarjottavat herkut, erikoiskahvit ja lounasvaihtoehdot.)</em></p>
+        </section>
+
+        <!-- TARINAMME -->
+        <section id="tarinamme">
+            <h2>Tervetuloa herkuttelemaan</h2>
+            <p>Löydät meidät kaupungin sydämestä. Kaikki tuotteemme leivotaan paikan päällä omassa keittiössämme parhaista raaka-aineista.</p>
+        </section>
+
+        <!-- YHTEYSTIEDOT -->
+        <section id="yhteystiedot">
+            <h2>Yhteystiedot</h2>
+            <p>Kaipaatko pöytävarausta tai haluatko tilata tuotteitamme juhliisi? Ota yhteyttä tai tule käymään.</p>
+            
+            <h3>Aukioloajat</h3>
+            <ul class="time-list">
+                <li><span>Maanantai - Perjantai:</span> <strong>07:00 - 18:00</strong></li>
+                <li><span>Lauantai:</span> <strong>09:00 - 16:00</strong></li>
+                <li><span>Sunnuntai:</span> <span style="color: #888;">Suljettu</span></li>
+            </ul>
+
+            <h3>Sijainti</h3>
+            <p>Aurinkokatu 5, Helsinki</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kahvila Aurinko. Aurinkokatu 5, Helsinki.</p>
+    </footer>
+
+</body>
+</html>
+
